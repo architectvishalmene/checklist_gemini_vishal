@@ -64,7 +64,7 @@ name: Deploy Checklist App
 on:
   push:
     branches:
-      - infra-ci-cd-pipeline
+      - test-branch
 
 jobs:
   deploy:
@@ -94,8 +94,8 @@ jobs:
               git reset --hard
               git pull origin infra-ci-cd-pipeline
             else
-              git clone https://github.com/aaryaa-infobeans/checklist_gemini.git .
-              git checkout infra-ci-cd-pipeline
+              git clone https://github.com/architectvishalmene/checklist_gemini_vishal.git .
+              git checkout test-branch
             fi
 
             # Build and run containers
